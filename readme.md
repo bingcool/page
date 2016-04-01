@@ -29,6 +29,6 @@ public function Page() {
 	$this->assign('page',$pagehtml);
 	$this->display();
 }
-
-demo演示图：
+     
+demo演示图：        
 ![image](https://github.com/bingcool/page/blob/master/demoimg/demo.png)
