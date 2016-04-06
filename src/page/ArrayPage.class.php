@@ -43,7 +43,7 @@ class ArrayPage {
     private $page;
 
     /**
-    * 
+    *
     */
     private $begin;
 
@@ -57,7 +57,7 @@ class ArrayPage {
     */
     private $end;
 
-    /*
+    /**
     * 需要携带的其他数据 &name=value形式
     */
     private $params;
@@ -100,6 +100,7 @@ class ArrayPage {
         $this->currentdata=array_slice($this->data,$this->begin,$this->per);
         // var_dump($this->data);
     }
+
     /**
     * 设置同时需要携带的URL参数，已数组 key=>value的方式传入   url?key=xxx  array("key"=>"xxx","tyty"=>"dsd")
     * @param $params 包含需要携带参数的数组
@@ -109,8 +110,10 @@ class ArrayPage {
             $this->params .= '&'.$key. '='.$value;
         }
     }
+
     /**
     * 输出结果
+    *
     */
     public function show() {
         $html = "<ul class=\"pagination\" style=\"display:block;\">";
