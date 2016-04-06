@@ -144,7 +144,7 @@ class ArrayPage {
             }
         }
         $html .= "</ul>";
-        // 返回html模板和数据
+        // 返回html模板和当页数据
         return $result=array(
         		'html'=>$html,
         		'currentdata'=>$this->currentdata
