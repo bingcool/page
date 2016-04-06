@@ -133,6 +133,16 @@ class ArrayPage {
         $this->numOfPage = $this->numOfPage == 0 ? "1" : $this->numOfPage;
         $html .= "<li><input type=\"number\" min=\"1\" max=\"{$this->numOfPage}\" name=\"p\" style=\"width:80px;margin:0 3px 0 3px;display:inline-block;\" class=\"form-control\" value=\"{$this->page}\"></li>";
         $html .= "<li><input type=\"submit\" class=\"btn btn-primary\"value=\"跳转\"></li>";
+        // form提交以get方式附带参数
+        if($this->params!='') {
+            $params = explode('&',$this->params);
+            foreach($params as $key=>$value) {
+                if($value) {
+                    $params_item = explode('=',$value);
+                    $html .= "<li><input type=\"hidden\" name=\"{$params_item[0]}\" value={$params_item[1]}></li>";
+                }
+            }
+        }
         $html .= "</ul>";
         return $result=array(
         		'html'=>$html,
