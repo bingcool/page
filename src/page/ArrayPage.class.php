@@ -14,7 +14,6 @@ class ArrayPage {
 	/**
 	*整个数组数据，必须指出
 	*/
-
 	public $data;
 
 	/**
